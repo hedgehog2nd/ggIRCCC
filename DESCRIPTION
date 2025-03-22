@@ -1,0 +1,13 @@
+Package: ggIRCCC
+Type: Package
+Title: Visualize Item Response Category Characteristic Curves.
+Version: 0.1.0
+Author: Tatsuya IKEDA
+Maintainer: Tatsuya IKEDA
+Description: Visualuze IRCCC from a mirt object, using the ggplot2 package.
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
