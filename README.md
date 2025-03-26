@@ -1,4 +1,5 @@
-# ggIRT
+# ggIRT  
+[![pkgdown site](https://img.shields.io/badge/docs-pkgdown-blue)](https://hedgehog2nd.github.io/ggIRT/)
 
 <!-- badges: start -->
 
@@ -48,9 +49,9 @@ gg_tic(res)
 
 ## Functions  
 
-- `gg_irccc`: Visualize Item Response Category Characteristic Curves (IRCCC) from mirt or ltm object.
-- `gg_iic`: Visualize Item Information Curves (IIC) from mirt or ltm object.
-- `gg_tic`: Visualize Test Information Curves (TIC) from mirt or ltm object.
+- `gg_irccc`: Visualize Item Response Category Characteristic Curves (IRCCC) from mirt or ltm object.[`detail`](https://hedgehog2nd.github.io/ggIRT/reference/gg_irccc.html)
+- `gg_iic`: Visualize Item Information Curves (IIC) from mirt or ltm object.[`detail`](https://hedgehog2nd.github.io/ggIRT/reference/gg_iic.html)
+- `gg_tic`: Visualize Test Information Curves (TIC) from mirt or ltm object.[`detail`](https://hedgehog2nd.github.io/ggIRT/reference/gg_tic.html)
 
 ## Depends
 

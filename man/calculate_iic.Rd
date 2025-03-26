@@ -7,7 +7,7 @@
 calculate_iic(object, item, theta, breaks, grm, use_ltm)
 }
 \arguments{
-\item{object}{mirt or grm object. If you use the grm object, you must set ltm = TRUE.}
+\item{object}{mirt or grm object. If you use the grm object, you must set use_ltm = TRUE.}
 
 \item{item}{numeric. The number of the item to be visualized. The length must be 1.}
 

@@ -37,7 +37,7 @@ Visualize test information Curves using ggplot2 package.
 }
 \examples{
 #library(mirt)
-#mirt_object <- mirt(data, itemtype = "graded")
+#mirt_object <- mirt(data, model = 1, itemtype = "graded")
 
 #gg_iic(mirt_object, item = 1)
 #gg <- gg_iic(mirt_object, item = 1)

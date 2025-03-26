@@ -2,7 +2,7 @@
 % Please edit documentation in R/gg_tic.R
 \name{item_info_grm}
 \alias{item_info_grm}
-\title{calculate item information from GRM.}
+\title{Calculate item information from GRM.}
 \usage{
 item_info_grm(thetas, a, b, item, use_ltm)
 }
@@ -13,11 +13,11 @@ item_info_grm(thetas, a, b, item, use_ltm)
 
 \item{b}{matrix. Difficulty level.}
 
-\item{item}{numeric. Item number}
+\item{item}{numeric. Item number.}
 
 \item{use_ltm}{logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.}
 }
 \description{
-\code{item_info_grm} Calculate the item information volume from the item parameter obtained from GRM.
+\code{item_info_grm} Calculate the item information from the item parameter obtained from GRM.
 }
 \keyword{internal}

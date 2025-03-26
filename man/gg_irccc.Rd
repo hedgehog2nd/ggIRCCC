@@ -42,7 +42,7 @@ Visualize the IRCCC of the specified item from the mirt or ltm object (output.da
 #library(mirt)
 #data(Bock1997)
 #dat <- Bock1997[1:3]
-#res <- mirt(dat, itemtype = "graded")
+#res <- mirt(dat, model = 1, itemtype = "graded")
 
 #gg_irccc(object = res, item = 1)
 #plot1 <- gg_irccc(object = res, item = 1)

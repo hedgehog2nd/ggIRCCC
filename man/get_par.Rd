@@ -10,6 +10,6 @@ get_par(object)
 \item{object}{mirt object}
 }
 \description{
-\code{get_par} Extracts item parameters from the mirt object.
+\code{get_par} Extracts item parameters (a and bs) from the mirt object.
 }
 \keyword{internal}

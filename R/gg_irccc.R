@@ -1,11 +1,11 @@
 #' @title generate column names.
 #' @description \code{rename_cols} The column names of the matrix of category response probabilities obtained by calculate_irccc are used as the rating categories. If the rating category is 10 or more, the tens place of the column names of the rating categories of 9 or less is padded with zeros. For example, if the rating category is 7, it becomes grade07.
 #'
-#' @param k numeric. Number of rating categories for any given item. It must be 3 or more.
+#' @param k numeric. Number of rating categories for any given item. It must be 2 or more.
 #' @keywords internal
 rename_cols <- function(k) {
-  if (k < 3) {
-    stop("The number of rating categories must be 3 or more. This package does not yet support anything other than GRM.")
+  if (k < 2) {
+    stop("The number of rating categories must be 2 or more. This package does not yet support anything other than GRM.")
   }
   if (k < 10) {# k < 10
     col_names <- paste0("grade", 1:k)
@@ -15,8 +15,8 @@ rename_cols <- function(k) {
   return(col_names)
 }
 
-#' @title The category response probability is calculated from the item parameter.
-#' @description \code{calculate_irccc} The category response probability is calculated from the item parameter.
+#' @title A category response probability is calculated from the item parameter.
+#' @description \code{calculate_irccc} Calculate a category response probability from the item parameter.
 #'
 #' @param thetas vector. Theta is the latent value of the range for calculating the category response probability. This value is calculated from the theta and breaks of gg_irccc.
 #' @param a numeric. The length must be 1. This represents the identification parameter.
@@ -48,7 +48,7 @@ calculate_irccc <- function(thetas, a, b, item, k, use_ltm) {
 }
 
 #' @title Extracts item parameters from the mirt object.
-#' @description \code{get_par} Extracts item parameters from the mirt object.
+#' @description \code{get_par} Extracts item parameters (a and bs) from the mirt object.
 #'
 #' @importFrom mirt mirt
 #' @importFrom mirt coef
@@ -90,7 +90,7 @@ get_par <- function(object){
 #' #library(mirt)
 #' #data(Bock1997)
 #' #dat <- Bock1997[1:3]
-#' #res <- mirt(dat, itemtype = "graded")
+#' #res <- mirt(dat, model = 1, itemtype = "graded")
 #'
 #' #gg_irccc(object = res, item = 1)
 #' #plot1 <- gg_irccc(object = res, item = 1)

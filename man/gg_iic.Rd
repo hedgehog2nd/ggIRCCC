@@ -46,5 +46,5 @@ Visualize item information using ggplot2 package.
 #library(ltm)
 #ltm_object <- ltm(data ~ z1, IRT.param = TRUE)
 
-#gg_iic(ltm_object, item = 1, theta = c(-5, 5), breaks = 1000, grm = FALSE, ltm = TRUE)
+#gg_iic(ltm_object, item = 1, theta = c(-5, 5), breaks = 1000, grm = FALSE, use_ltm = TRUE)
 }

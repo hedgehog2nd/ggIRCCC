@@ -7,7 +7,7 @@
 rename_cols(k)
 }
 \arguments{
-\item{k}{numeric. Number of rating categories for any given item. It must be 3 or more.}
+\item{k}{numeric. Number of rating categories for any given item. It must be 2 or more.}
 }
 \description{
 \code{rename_cols} The column names of the matrix of category response probabilities obtained by calculate_irccc are used as the rating categories. If the rating category is 10 or more, the tens place of the column names of the rating categories of 9 or less is padded with zeros. For example, if the rating category is 7, it becomes grade07.

@@ -1,10 +1,10 @@
-#' @title calculate item information from GRM.
-#' @description \code{item_info_grm} Calculate the item information volume from the item parameter obtained from GRM.
+#' @title Calculate item information from GRM.
+#' @description \code{item_info_grm} Calculate the item information from the item parameter obtained from GRM.
 #'
 #' @param thetas vector.
 #' @param a vector. Discriminating power.
 #' @param b matrix. Difficulty level.
-#' @param item numeric. Item number
+#' @param item numeric. Item number.
 #' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.
 #' @keywords internal
 item_info_grm <- function(thetas, a, b, item, use_ltm) {
@@ -56,7 +56,7 @@ item_info_grm <- function(thetas, a, b, item, use_ltm) {
 #' @param a vector. Discriminating power.
 #' @param b matrix. Difficulty level.
 #' @param item numeric. Item number
-#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.
+#' @param use_ltm logical. The default is FALSE. If the object is either ltm or grm object from the ltm package, set this to TRUE.
 #' @keywords internal
 item_info_2plm <- function(thetas, a, b, item, use_ltm) {
   ai = a[item]
@@ -78,7 +78,7 @@ item_info_2plm <- function(thetas, a, b, item, use_ltm) {
 #' @title calculate item information.
 #' @description \code{calculate_iic} Calculate the item information volume from the item parameter obtained from GRM or 2PLM.
 #'
-#' @param object mirt or grm object. If you use the grm object, you must set ltm = TRUE.
+#' @param object mirt or grm object. If you use the grm object, you must set use_ltm = TRUE.
 #' @param item numeric. The number of the item to be visualized. The length must be 1.
 #' @param theta vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().
 #' @param breaks numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.
@@ -139,7 +139,7 @@ calculate_iic <- function(object, item, theta, breaks, grm, use_ltm) {
 #' #library(ltm)
 #' #ltm_object <- ltm(data ~ z1, IRT.param = TRUE)
 #'
-#' #gg_iic(ltm_object, item = 1, theta = c(-5, 5), breaks = 1000, grm = FALSE, ltm = TRUE)
+#' #gg_iic(ltm_object, item = 1, theta = c(-5, 5), breaks = 1000, grm = FALSE, use_ltm = TRUE)
 gg_iic <- function(object, item, theta = c(-3, 3), breaks = 100, grm = TRUE, use_ltm = FALSE, output.data = FALSE) {
   # check arguments part below
   # check object class
@@ -211,7 +211,7 @@ gg_iic <- function(object, item, theta = c(-3, 3), breaks = 100, grm = TRUE, use
 #' @title calculate test information.
 #' @description \code{calculate_test_info} Calculate the test information volume from the item parameter obtained from GRM or 2PLM.
 #'
-#' @param object mirt or grm object. If you use the grm object, you must set use_ltm = TRUE.
+#' @param object mirt or grm object. If you use the grm object generated from ltm package, you must set use_ltm = TRUE.
 #' @param theta vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().
 #' @param breaks numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.
 #' @param grm logical. The default is TRUE. The default is TRUE. If you are using a binary IRT　(2PLM) object, set it to TRUE.
@@ -250,7 +250,7 @@ calculate_test_info <- function(object, theta, breaks, grm, use_ltm) {
 #' @export
 #' @examples
 #' #library(mirt)
-#' #mirt_object <- mirt(data, itemtype = "graded")
+#' #mirt_object <- mirt(data, model = 1, itemtype = "graded")
 #'
 #' #gg_iic(mirt_object, item = 1)
 #' #gg <- gg_iic(mirt_object, item = 1)

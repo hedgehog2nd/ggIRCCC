@@ -7,7 +7,7 @@
 calculate_test_info(object, theta, breaks, grm, use_ltm)
 }
 \arguments{
-\item{object}{mirt or grm object. If you use the grm object, you must set use_ltm = TRUE.}
+\item{object}{mirt or grm object. If you use the grm object generated from ltm package, you must set use_ltm = TRUE.}
 
 \item{theta}{vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().}
 

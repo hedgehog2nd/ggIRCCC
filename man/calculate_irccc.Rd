@@ -2,7 +2,7 @@
 % Please edit documentation in R/gg_irccc.R
 \name{calculate_irccc}
 \alias{calculate_irccc}
-\title{The category response probability is calculated from the item parameter.}
+\title{A category response probability is calculated from the item parameter.}
 \usage{
 calculate_irccc(thetas, a, b, item, k, use_ltm)
 }
@@ -20,6 +20,6 @@ calculate_irccc(thetas, a, b, item, k, use_ltm)
 \item{use_ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.}
 }
 \description{
-\code{calculate_irccc} The category response probability is calculated from the item parameter.
+\code{calculate_irccc} Calculate a category response probability from the item parameter.
 }
 \keyword{internal}
