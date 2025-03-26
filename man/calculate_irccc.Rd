@@ -4,23 +4,22 @@
 \alias{calculate_irccc}
 \title{The category response probability is calculated from the item parameter.}
 \usage{
-calculate_irccc(theta, a, b, item)
+calculate_irccc(thetas, a, b, item, k, use_ltm)
 }
 \arguments{
-\item{theta}{vector. Theta is the latent value of the range for calculating the category response probability. This value is calculated from the theta and breaks of gg_irccc.}
+\item{thetas}{vector. Theta is the latent value of the range for calculating the category response probability. This value is calculated from the theta and breaks of gg_irccc.}
 
 \item{a}{numeric. The length must be 1. This represents the identification parameter.}
 
 \item{b}{vector. This is the parameter for difficulty level.}
 
 \item{item}{numeric. The length must be 1. This value is the number of the item for calculating the category response probability.}
-}
-\value{
-Theta, the discrimination parameter, and the difficulty parameter are used to calculate the category response probability for the specified item, and the results are output.
+
+\item{k}{numeric. Number of rating categories for any given item. It must be 3 or more.}
+
+\item{use_ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.}
 }
 \description{
 \code{calculate_irccc} The category response probability is calculated from the item parameter.
 }
-\examples{
-# calculate_irccc(theta = seq(-4:4, ), a, b, item)
-}
+\keyword{internal}

@@ -1,18 +1,18 @@
-Package: ggIRCCC
+Package: ggIRT
 Type: Package
-Title: Visualize Item Response Category Characteristic Curves and Test Information Curve
-Version: 0.1.1
+Title: Visualize Item Response Category Characteristic Curves, Item Characteristic Curves, Item Information Curves, and Test Information Curve
+Version: 1.0.0
 Author: Tatsuya IKEDA
 Maintainer: Tatsuya IKEDA <ikeda.tatsuya.clpsy@gmail.com>
-Description: Visualuze IRCCC and TIC from a mirt object, using the ggplot2 package.
+Description: Visualuze IRCCC, ICC, IIC, and TIC from a mirt object, using the ggplot2 package.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+URL: https://hedgehog2nd.github.io/ggIRT/
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: R (>= 4.1.0)
 Imports:
     ggplot2,
     ltm,
-    mirt,
-    stats
+    mirt

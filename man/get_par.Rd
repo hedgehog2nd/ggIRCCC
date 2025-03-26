@@ -9,12 +9,7 @@ get_par(object)
 \arguments{
 \item{object}{mirt object}
 }
-\value{
-output item parameters.
-}
 \description{
 \code{get_par} Extracts item parameters from the mirt object.
 }
-\examples{
-# get_par(object)
-}
+\keyword{internal}

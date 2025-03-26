@@ -1,28 +1,27 @@
 # ggIRT
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-
 ## Overview
-The `ggIRT` R package provides functions for visualizing the results of analyses using the `mirt` or `ltm` packages. The following can be done with this package  
+
+The `ggIRT` R package provides functions for visualizing the results of analyses using the `mirt` or `ltm` packages. The following can be done with this package:  
 
 - Visualization of item characteristic curves (`gg_irccc`)  
 - Visualization of item response category characteristic curves (`gg_irccc`)  
-- Visualization of test information curves (`gg_tic`). Currently, only the `mirt` package is supported.  
+- Visualization of test information curves (`gg_tic`)  
+- Visualization of item information curves (`gg_iic`)  
 
+The following functions are not implemented, but these are planned to be added in the future
 
-The following functions are not implemented, but these are planned to be added in the future  
-
-- Visualization of ICC for each group  
-- Visualization of IRCCC for each group  
-- Visualization of TIC based on analysis results obtained from the ltm package  
-- Visualization of test characteristic curves  
-
+-   Visualization of ICC for multiple group  
+-   Visualization of IRCCC for multiple group  
+-   Visualization of test characteristic curves  
 
 ## Installation
 
-You can install the development version of ggIRCCC from [GitHub](https://github.com/) with:
+You can install the development version of `ggIRT` from [GitHub](https://github.com/hedgehog2nd/ggIRT) with:  
 
 ``` r
 # install.packages("devtools")
@@ -47,12 +46,35 @@ gg + theme_bw() + labs(x = "THETA", y = "PROB.", title = "IRCCC item 1")
 gg_tic(res)
 ```
 
-## Depends  
-This package requires the following;  
+## Functions  
 
-- R (>= 4.1.0)  
-- ggplot2  
-- mirt  
-- ltm  
-- stats  
+- `gg_irccc`: Visualize Item Response Category Characteristic Curves (IRCCC) from mirt or ltm object.
+- `gg_iic`: Visualize Item Information Curves (IIC) from mirt or ltm object.
+- `gg_tic`: Visualize Test Information Curves (TIC) from mirt or ltm object.
 
+## Depends
+
+This package requires the following:  
+
+- `R` (>= 4.1.0)  
+- `ggplot2`  
+- `mirt`  
+- `ltm`  
+
+## Version History
+
+version 1.0.0  
+Updated on March 26, 2025 (JST) 
+
+- Create a README file.  
+- Create a help file.  
+- Item information curve output is now supported (`gg_iic`).  
+- `gg_tic` function now supports `ltm` and `grm` objects.
+- `gg_tic` function now supports binary IRT.
+- To avoid a conflict with the `ltm` function, the `ltm` argument has been changed to `use_ltm`.  
+- fix `gg_irccc` function.
+
+version 0.1.0  
+March 24, 2025 (JST) 
+
+- released  

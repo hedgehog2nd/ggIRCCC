@@ -11,7 +11,7 @@ gg_irccc(
   breaks = 100,
   grm = TRUE,
   monochrome = FALSE,
-  ltm = FALSE,
+  use_ltm = FALSE,
   output.data = FALSE
 )
 }
@@ -28,7 +28,7 @@ gg_irccc(
 
 \item{monochrome}{logical. The default is FALSE, and IRCCC is output in color. If TRUE, IRCCC is output in black and white.}
 
-\item{ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.}
+\item{use_ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.}
 
 \item{output.data}{Logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.}
 }
@@ -39,10 +39,18 @@ Visualize the IRCCC of the specified item from the mirt or ltm object (output.da
 \code{gg_irccc} visualize IRCCC from mirt or ltm object.
 }
 \examples{
+#library(mirt)
+#data(Bock1997)
+#dat <- Bock1997[1:3]
+#res <- mirt(dat, itemtype = "graded")
+
 #gg_irccc(object = res, item = 1)
 #plot1 <- gg_irccc(object = res, item = 1)
 #plot1 + theme_bw()
 
-#gg_irccc(object = res, item = 1, ltm = TRUE)
+#library(ltm)
+#res <- grm(dat[1:3], IRT.param = TRUE)
+
+#gg_irccc(object = res, item = 1, use_ltm = TRUE)
 #d <- gg_irccc(object = res, item = 1, output.data = TRUE)
 }
