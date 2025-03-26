@@ -1,0 +1,8 @@
+pandoc: 3.1.11
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles: {}
+last_built: 2025-03-26T12:40Z
+urls:
+  reference: https://hedgehog2nd.github.io/ggIRT/reference
+  article: https://hedgehog2nd.github.io/ggIRT/articles
