@@ -22,7 +22,7 @@ rename_cols <- function(k) {
 #' @param a numeric. The length must be 1. This represents the identification parameter.
 #' @param b vector. This is the parameter for difficulty level.
 #' @param item numeric. The length must be 1. This value is the number of the item for calculating the category response probability.
-#' @param use_ltm logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.
+#' @param use_ltm logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.
 #' @param k numeric. Number of rating categories for any given item. It must be 3 or more.
 #' @keywords internal
 calculate_irccc <- function(thetas, a, b, item, k, use_ltm) {
@@ -78,12 +78,12 @@ get_par <- function(object){
 #' @importFrom ggplot2 scale_linetype_manual
 #' @param object mirt or grm object. If you use the grm object, you must set ltm = TRUE.
 #' @param item numeric. The number of the item to be visualized. The length must be 1.
-#' @param theta vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().
+#' @param theta vector. The length must be 2. Specify the range of theta in the IRCCC to be visualized using c().
 #' @param breaks numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.
 #' @param grm logical. The default is TRUE. If the object is GRM, set it to TRUE, and if it is a binary type, set it to FALSE.
 #' @param monochrome logical. The default is FALSE, and IRCCC is output in color. If TRUE, IRCCC is output in black and white.
-#' @param use_ltm logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.
-#' @param output.data Logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.
+#' @param use_ltm logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.
+#' @param output.data logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.
 #' @return Visualize the IRCCC of the specified item from the mirt or ltm object (output.data = FALSE). Output data that can visualize the IRCCC of the specified item from the mirt or ltm object (output.data = TRUE).
 #' @export
 #' @examples

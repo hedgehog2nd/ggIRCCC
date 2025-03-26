@@ -20,7 +20,7 @@ gg_irccc(
 
 \item{item}{numeric. The number of the item to be visualized. The length must be 1.}
 
-\item{theta}{vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().}
+\item{theta}{vector. The length must be 2. Specify the range of theta in the IRCCC to be visualized using c().}
 
 \item{breaks}{numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.}
 
@@ -28,9 +28,9 @@ gg_irccc(
 
 \item{monochrome}{logical. The default is FALSE, and IRCCC is output in color. If TRUE, IRCCC is output in black and white.}
 
-\item{use_ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.}
+\item{use_ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.}
 
-\item{output.data}{Logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.}
+\item{output.data}{logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.}
 }
 \value{
 Visualize the IRCCC of the specified item from the mirt or ltm object (output.data = FALSE). Output data that can visualize the IRCCC of the specified item from the mirt or ltm object (output.data = TRUE).

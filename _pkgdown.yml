@@ -1,4 +1,13 @@
 url: https://hedgehog2nd.github.io/ggIRT/
 template:
   bootstrap: 5
-
+navbar:
+  structure:
+    left:
+      - home
+      - reference
+      - pdf-manual
+  components:
+    pdf-manual:
+      text: PDF Manual
+      href: ggIRT-manual.pdf

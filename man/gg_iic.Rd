@@ -19,15 +19,15 @@ gg_iic(
 
 \item{item}{numeric. The number of the item to be visualized. The length must be 1.}
 
-\item{theta}{vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().}
+\item{theta}{vector. The length must be 2. Specify the range of theta in the IRCCC to be visualized using c().}
 
 \item{breaks}{numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.}
 
-\item{grm}{logical. The default is TRUE. If you are using a binary IRT　(2PLM) object, set it to TRUE.}
+\item{grm}{logical. The default is TRUE. If you are using a binary IRT (2PLM) object, set it to TRUE.}
 
-\item{use_ltm}{logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.}
+\item{use_ltm}{logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.}
 
-\item{output.data}{Logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.}
+\item{output.data}{logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.}
 }
 \value{
 Visualize item information using ggplot2 package.

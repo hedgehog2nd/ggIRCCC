@@ -15,7 +15,7 @@ item_info_grm(thetas, a, b, item, use_ltm)
 
 \item{item}{numeric. Item number.}
 
-\item{use_ltm}{logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.}
+\item{use_ltm}{logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.}
 }
 \description{
 \code{item_info_grm} Calculate the item information from the item parameter obtained from GRM.

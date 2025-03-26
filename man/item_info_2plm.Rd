@@ -15,7 +15,7 @@ item_info_2plm(thetas, a, b, item, use_ltm)
 
 \item{item}{numeric. Item number}
 
-\item{use_ltm}{logical. The default is FALSE. If the object is either ltm or grm object from the ltm package, set this to TRUE.}
+\item{use_ltm}{logical. The default is FALSE. If the object is either ltm or grm object from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.}
 }
 \description{
 \code{item_info_2plm} Calculate the item information volume from the item parameter obtained from 2PLM.

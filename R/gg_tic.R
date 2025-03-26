@@ -5,7 +5,7 @@
 #' @param a vector. Discriminating power.
 #' @param b matrix. Difficulty level.
 #' @param item numeric. Item number.
-#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.
+#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.
 #' @keywords internal
 item_info_grm <- function(thetas, a, b, item, use_ltm) {
   K <- ncol(b)  # number of category response
@@ -56,7 +56,7 @@ item_info_grm <- function(thetas, a, b, item, use_ltm) {
 #' @param a vector. Discriminating power.
 #' @param b matrix. Difficulty level.
 #' @param item numeric. Item number
-#' @param use_ltm logical. The default is FALSE. If the object is either ltm or grm object from the ltm package, set this to TRUE.
+#' @param use_ltm logical. The default is FALSE. If the object is either ltm or grm object from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.
 #' @keywords internal
 item_info_2plm <- function(thetas, a, b, item, use_ltm) {
   ai = a[item]
@@ -80,10 +80,10 @@ item_info_2plm <- function(thetas, a, b, item, use_ltm) {
 #'
 #' @param object mirt or grm object. If you use the grm object, you must set use_ltm = TRUE.
 #' @param item numeric. The number of the item to be visualized. The length must be 1.
-#' @param theta vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().
+#' @param theta vector. The length must be 2. Specify the range of theta in the IRCCC to be visualized using c().
 #' @param breaks numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.
-#' @param grm logical. The default is TRUE. The default is TRUE. If you are using a binary IRT　(2PLM) object, set it to TRUE.
-#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.
+#' @param grm logical. The default is TRUE. The default is TRUE. If you are using a binary IRT (2PLM) object, set it to TRUE.
+#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.
 #' @keywords internal
 calculate_iic <- function(object, item, theta, breaks, grm, use_ltm) {
   thetas = seq(min(theta), max(theta), length.out = breaks)
@@ -121,11 +121,11 @@ calculate_iic <- function(object, item, theta, breaks, grm, use_ltm) {
 #'
 #' @param object mirt or grm object. If you use the grm object, you must set ltm = TRUE.
 #' @param item numeric. The number of the item to be visualized. The length must be 1.
-#' @param theta vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().
+#' @param theta vector. The length must be 2. Specify the range of theta in the IRCCC to be visualized using c().
 #' @param breaks numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.
-#' @param grm logical. The default is TRUE. If you are using a binary IRT　(2PLM) object, set it to TRUE.
-#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.
-#' @param output.data Logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.
+#' @param grm logical. The default is TRUE. If you are using a binary IRT (2PLM) object, set it to TRUE.
+#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.
+#' @param output.data logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.
 #' @return Visualize item information using ggplot2 package.
 #' @export
 #' @examples
@@ -212,10 +212,10 @@ gg_iic <- function(object, item, theta = c(-3, 3), breaks = 100, grm = TRUE, use
 #' @description \code{calculate_test_info} Calculate the test information volume from the item parameter obtained from GRM or 2PLM.
 #'
 #' @param object mirt or grm object. If you use the grm object generated from ltm package, you must set use_ltm = TRUE.
-#' @param theta vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().
+#' @param theta vector. The length must be 2. Specify the range of theta in the IRCCC to be visualized using c().
 #' @param breaks numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.
-#' @param grm logical. The default is TRUE. The default is TRUE. If you are using a binary IRT　(2PLM) object, set it to TRUE.
-#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.
+#' @param grm logical. The default is TRUE. The default is TRUE. If you are using a binary IRT (2PLM) object, set it to TRUE.
+#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.
 #' @keywords internal
 calculate_test_info <- function(object, theta, breaks, grm, use_ltm) {
   thetas = seq(min(theta), max(theta), length.out = breaks)
@@ -240,12 +240,12 @@ calculate_test_info <- function(object, theta, breaks, grm, use_ltm) {
 #' @description \code{gg_tic} Calculate the item information volume from the item parameter obtained from GRM.
 #'
 #' @param object mirt or grm object. If you use the grm object, you must set ltm = TRUE.
-#' @param theta vector. The length must be 2. Specify the range of θ in the IRCCC to be visualized using c().
+#' @param theta vector. The length must be 2. Specify the range of theta in the IRCCC to be visualized using c().
 #' @param breaks numeric. Specifies the number of divisions of theta. For example, if you specify 1000, the range specified by theta will be divided into 1000 parts. The default is 100.
 #' @param se logical. The default is TRUE. If you are not adding a SE to the test information curve, set it to FALSE.
-#' @param grm logical. The default is TRUE. If you are using a binary IRT　(2PLM) object, set it to TRUE.
-#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.
-#' @param output.data Logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.
+#' @param grm logical. The default is TRUE. If you are using a binary IRT (2PLM) object, set it to TRUE.
+#' @param use_ltm logical. The default is FALSE. If you are using an object (either an ltm object or a grm object) from the ltm package, set this to TRUE.When use_ltm = TRUE, the scale factor D is corrected to 1.701.
+#' @param output.data logical. The default is FALSE. If TRUE, instead of visualizing IRCCC, the data that forms the basis of IRCCC is output in long format.
 #' @return Visualize test information Curves using ggplot2 package.
 #' @export
 #' @examples

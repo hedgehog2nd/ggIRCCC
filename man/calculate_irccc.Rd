@@ -17,7 +17,7 @@ calculate_irccc(thetas, a, b, item, k, use_ltm)
 
 \item{k}{numeric. Number of rating categories for any given item. It must be 3 or more.}
 
-\item{use_ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE.}
+\item{use_ltm}{logical. The default is FALSE. If you are using the mirt object, set this to FALSE. If you are using the grm object from the ltm package, set this option to TRUE. When use_ltm = TRUE, the scale factor D is corrected to 1.701.}
 }
 \description{
 \code{calculate_irccc} Calculate a category response probability from the item parameter.

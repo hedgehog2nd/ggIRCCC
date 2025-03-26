@@ -1,5 +1,7 @@
 # ggIRT  
+
 [![pkgdown site](https://img.shields.io/badge/docs-pkgdown-blue)](https://hedgehog2nd.github.io/ggIRT/)
+[![PDF manual](https://img.shields.io/badge/docs-PDF--manual-green)](https://hedgehog2nd.github.io/ggIRT/ggIRT-manual.pdf)
 
 <!-- badges: start -->
 
@@ -64,9 +66,10 @@ This package requires the following:
 
 ## Version History
 
-version 1.0.0  
+version 1.0.1  
 Updated on March 26, 2025 (JST) 
 
+- Create a PDF manual.
 - Create a README file.  
 - Create a help file.  
 - Item information curve output is now supported (`gg_iic`).  
@@ -74,6 +77,7 @@ Updated on March 26, 2025 (JST)
 - `gg_tic` function now supports binary IRT.
 - To avoid a conflict with the `ltm` function, the `ltm` argument has been changed to `use_ltm`.  
 - fix `gg_irccc` function.
+- fix missspells.
 
 version 0.1.0  
 March 24, 2025 (JST) 
